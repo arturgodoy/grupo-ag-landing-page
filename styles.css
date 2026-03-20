@@ -592,3 +592,32 @@ body {
     box-sizing: border-box;
   }
 }
+
+/* --- Desktop: Oculta o botão que está DENTRO da lista --- */
+@media (min-width: 769px) {
+  .mobile-menu-item-btn {
+    display: none !important;
+  }
+}
+
+/* --- Mobile: Ajustes visuais --- */
+@media (max-width: 768px) {
+  /* 1. Oculta o botão "original" que fica fora do menu (provavelmente '.navbar .btn' ou a classe específica dele no header) */
+  .navbar .btn {
+    display: none !important;
+  }
+
+  /* 2. Exibe o novo botão que está dentro da lista */
+  .mobile-menu-item-btn {
+    display: block !important;
+    margin-top: 15px; /* Adiciona um espaço do último item do menu */
+  }
+
+  /* 3. Garante que o botão dentro da lista ocupe toda a largura disponível para ficar mais fácil de clicar */
+  .mobile-menu-item-btn a {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    padding: 12px; /* Aumenta a área de toque */
+  }
+}
