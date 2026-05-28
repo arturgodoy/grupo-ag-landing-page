@@ -33,11 +33,11 @@
     </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-white text-ink antialiased">
-    <main>
-      <section class="w-full">
+  <body class="overflow-x-hidden bg-white text-ink antialiased">
+    <main class="w-full max-w-full overflow-x-hidden">
+      <section class="w-full max-w-full">
         <div
-          class="relative flex min-h-screen w-full flex-col justify-between overflow-hidden rounded-none bg-charcoal px-8 py-8 text-white md:px-16"
+          class="relative flex min-h-0 w-full max-w-full flex-col justify-between gap-10 overflow-hidden rounded-none bg-charcoal px-4 py-16 text-white sm:px-6 md:px-12 md:py-20 lg:min-h-screen lg:px-16 lg:py-24"
         >
           <div
             class="pointer-events-none absolute -left-36 -top-36 h-[420px] w-[420px] rounded-full bg-cyan-400/20 blur-[140px]"
@@ -120,7 +120,7 @@
 
           <div
             id="home"
-            class="relative z-10 mt-8 flex flex-col gap-12 md:mt-12"
+            class="relative z-10 mt-6 flex w-full max-w-full flex-col gap-8 md:mt-8 md:gap-12"
           >
             <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
               <span
@@ -132,11 +132,11 @@
               <h1
                 class="mt-5 max-w-3xl tracking-tight"
               >
-                <span class="block text-5xl font-bold leading-tight md:text-7xl" data-i18n="hero-title-1">
+                <span class="block text-4xl font-bold leading-tight sm:text-5xl lg:text-7xl" data-i18n="hero-title-1">
                   Infraestrutura digital
                 </span>
                 <span
-                  class="mt-2 block text-3xl font-medium leading-tight text-white/85 md:mt-4 md:text-5xl"
+                  class="mt-2 block text-2xl font-medium leading-tight text-white/85 sm:text-3xl md:mt-4 lg:text-5xl"
                   data-i18n="hero-title-2"
                 >
                   que transforma sua empresa.
@@ -231,18 +231,20 @@
             />
             <div class="mt-6 flex items-center justify-between gap-4 sm:mt-8">
               <h3 class="text-2xl font-semibold text-zinc-900">AG Barber PRO</h3>
-              <a
-                href="#"
+              <button
+                type="button"
+                onclick="openModal()"
                 class="shrink-0 rounded-full border border-zinc-900/15 bg-white px-4 py-2 text-sm font-medium text-zinc-900 transition hover:border-zinc-900/35"
                 data-i18n="view-system"
-                >Ver sistema ↗</a
               >
+                Ver sistema ↗
+              </button>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="mt-24 overflow-hidden border-y border-black/5 py-8">
+      <section class="mt-24 w-full max-w-full overflow-hidden border-y border-black/5 py-8">
         <div
           id="marquee"
           class="marquee-track whitespace-nowrap text-[13vw] font-semibold leading-none text-black"
@@ -288,8 +290,86 @@
 
     </main>
 
+    <div
+      id="modal-barber"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-barber-title"
+    >
+      <div
+        class="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-xl sm:p-10"
+        onclick="event.stopPropagation()"
+      >
+        <button
+          type="button"
+          id="modal-barber-close"
+          class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-black/10 text-lg text-zinc-500 transition hover:border-zinc-900/20 hover:bg-zinc-50 hover:text-zinc-900"
+          data-i18n-aria="aria-close-modal"
+          aria-label="Fechar"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="space-y-4 pr-8 text-left">
+          <h3 id="modal-barber-title" class="text-2xl font-bold tracking-tight text-gray-900">
+            AG Barber PRO
+          </h3>
+          <p class="text-sm font-medium text-gray-600 md:text-base">
+            Diga adeus ao caderno de papel e à desorganização. O AG Barber PRO é a ferramenta
+            definitiva para você assumir o controle total da sua barbearia, profissionalizar o
+            atendimento e focar no que realmente importa:
+            <span class="font-bold text-black">lucrar e crescer.</span>
+          </p>
+
+          <ul
+            class="mt-6 space-y-3 rounded-lg border border-gray-100 bg-gray-50 p-4 text-sm text-gray-700 md:text-base"
+          >
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-green-600">✓</span>
+              <span
+                ><strong>Agenda Inteligente:</strong> Visualize horários, evite choques na agenda
+                e organize os cortes de cada barbeiro da sua equipe.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-green-600">✓</span>
+              <span
+                ><strong>Controle de Caixa e Comandas:</strong> Acompanhe receitas, despesas e
+                comandas abertas em tempo real. Saiba exatamente para onde vai o seu dinheiro.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-green-600">✓</span>
+              <span
+                ><strong>Gestão de Comissões:</strong> Calcule automaticamente o repasse de cada
+                profissional, sem dor de cabeça no fim do mês.</span
+              >
+            </li>
+          </ul>
+
+          <div class="mt-6 flex flex-col justify-end gap-3 border-t border-gray-100 pt-6 sm:flex-row">
+            <button
+              type="button"
+              onclick="closeModal()"
+              class="w-full px-5 py-2.5 font-semibold text-gray-600 transition-colors hover:text-black sm:w-auto"
+            >
+              Fechar
+            </button>
+            <a
+              href="https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20do%20AG%20Barber%20PRO."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full rounded-lg bg-black px-6 py-2.5 text-center font-semibold text-white shadow-md transition-all hover:bg-gray-800 sm:w-auto"
+            >
+              Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer id="footer" class="mt-32 border-t border-black/10 pt-24">
-      <div class="mx-auto grid max-w-[1240px] gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div class="mx-auto grid w-full max-w-[1240px] min-w-0 grid-cols-1 gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <h3 class="max-w-xs text-2xl font-semibold leading-tight" data-i18n="footer-headline">
             Transforme suas ideias em resultados impactantes
@@ -330,7 +410,7 @@
         </div>
 
         <div
-          class="flex w-full min-w-0 items-center gap-6 rounded-2xl border border-gray-200 bg-zinc-50 p-4 sm:min-w-[380px] lg:min-w-[420px]"
+          class="flex w-full min-w-0 max-w-full items-center gap-6 rounded-2xl border border-gray-200 bg-zinc-50 p-4 lg:min-w-[380px] xl:min-w-[420px]"
         >
           <img
             src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20do%20Grupo%20AG."
@@ -364,5 +444,39 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      const modal = document.getElementById("modal-barber");
+      const modalCloseBtn = document.getElementById("modal-barber-close");
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      function openModal() {
+        if (!modal) return;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener("click", closeModal);
+      }
+
+      if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+            closeModal();
+          }
+        });
+      }
+    </script>
   </body>
 </html>

@@ -56,6 +56,7 @@
       en: "We focus on the future of development and digital infrastructure. We deliver the complete technology foundation for management, optimizing your company's digital presence.",
     },
     "view-system": { pt: "Ver sistema ↗", en: "View system ↗" },
+    "aria-close-modal": { pt: "Fechar", en: "Close" },
     "services-title": {
       pt: "Tecnologia que impulsiona seu sucesso",
       en: "Technology that drives your success",
