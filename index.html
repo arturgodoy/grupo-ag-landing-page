@@ -3,250 +3,366 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grupo AG</title>
+    <title>Grupo AG | Infraestrutura Digital</title>
     <meta
       name="description"
-      content="SclopeAI - Full-Service AI Partner para transformar estratégia em resultados reais com IA."
+      content="Grupo AG: infraestrutura digital, sistemas e soluções SaaS para empresas que querem crescer com tecnologia."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            colors: {
+              charcoal: "#0b101c",
+              ink: "#101828",
+              slate: "#667085",
+            },
+          },
+        },
+      };
+    </script>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .logo-img {
-        height: 35px;
-        width: auto;
-      }
-    </style>
   </head>
-  <body>
-    <div class="page-bg-glow" aria-hidden="true"></div>
-
-    <header class="navbar-wrapper">
-      <nav class="navbar container">
-        <a href="#home" class="logo"
-          ><img
-            src="LetraLogo.png"
-            class="logo-img"
-            alt="Logo Grupo AG"
-          />Grupo AG</a
+  <body class="bg-white text-ink antialiased">
+    <main>
+      <section class="w-full">
+        <div
+          class="relative flex min-h-screen w-full flex-col justify-between overflow-hidden rounded-none bg-charcoal px-8 py-8 text-white md:px-16"
         >
+          <div
+            class="pointer-events-none absolute -left-36 -top-36 h-[420px] w-[420px] rounded-full bg-cyan-400/20 blur-[140px]"
+          ></div>
+          <div
+            class="pointer-events-none absolute right-0 top-20 h-[340px] w-[340px] rounded-full bg-indigo-500/10 blur-[130px]"
+          ></div>
 
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#vantagens">Vantagens</a></li>
-          <li><a href="#faq">Dúvidas</a></li>
-          <li class="mobile-menu-item-btn">
-            <a
-              href="https://wa.me/5591137480?text=Ol%C3%A1!%20Estou%20no%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
-              target="_blank"
-              class="btn btn-primary"
-              rel="noopener noreferrer"
-              >QUERO SER PRO</a
+          <header class="relative z-10">
+            <nav class="relative flex w-full items-center justify-between gap-4">
+              <a href="#home" class="text-lg font-semibold tracking-tight sm:text-xl"
+                >Grupo AG</a
+              >
+              <ul
+                class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-sm font-medium text-white/85 md:flex"
+              >
+                <li><a class="hover:text-white" href="#home" data-i18n="nav-home">Home</a></li>
+                <li><a class="hover:text-white" href="#portfolio" data-i18n="nav-systems">Sistemas</a></li>
+                <li><a class="hover:text-white" href="#servicos" data-i18n="nav-solutions">Soluções</a></li>
+                <li><a class="hover:text-white" href="#footer" data-i18n="nav-contact">Contato</a></li>
+              </ul>
+              <div class="hidden items-center gap-3 lg:flex">
+                <div class="mr-4">
+                  <button
+                    type="button"
+                    id="languageToggle"
+                    class="relative flex h-7 w-14 cursor-pointer items-center rounded-full bg-gray-700 transition-colors duration-300 hover:bg-gray-600"
+                    data-i18n-aria="aria-switch-lang"
+                    aria-label="Mudar para Inglês"
+                  >
+                    <span
+                      id="languageThumb"
+                      class="absolute left-1 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-gray-900 transition-all duration-300"
+                      >PT</span
+                    >
+                  </button>
+                </div>
+                <a
+                  href="#footer"
+                  class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-charcoal transition hover:bg-white/90"
+                  data-i18n="cta-start"
+                  >Iniciar projeto</a
+                >
+              </div>
+              <button
+                id="mobileMenuButton"
+                class="inline-flex rounded-full border border-white/25 p-2.5 lg:hidden"
+                data-i18n-aria="aria-open-menu"
+                aria-label="Abrir menu"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </nav>
+            <div id="mobileMenu" class="mt-4 hidden flex-col gap-3 lg:hidden">
+              <a class="rounded-xl border border-white/10 px-3 py-2" href="#home" data-i18n="nav-home">Home</a>
+              <a class="rounded-xl border border-white/10 px-3 py-2" href="#portfolio" data-i18n="nav-systems"
+                >Sistemas</a
+              >
+              <a class="rounded-xl border border-white/10 px-3 py-2" href="#servicos" data-i18n="nav-solutions"
+                >Soluções</a
+              >
+              <a class="rounded-xl border border-white/10 px-3 py-2" href="#footer" data-i18n="nav-contact"
+                >Contato</a
+              >
+            </div>
+          </header>
+
+          <div
+            id="home"
+            class="relative z-10 mt-8 flex flex-col gap-12 md:mt-12"
+          >
+            <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+              <span
+                class="inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-white/90"
+                data-i18n="hero-badge"
+              >
+                Grupo AG | O futuro do desenvolvimento
+              </span>
+              <h1
+                class="mt-5 max-w-3xl tracking-tight"
+              >
+                <span class="block text-5xl font-bold leading-tight md:text-7xl" data-i18n="hero-title-1">
+                  Infraestrutura digital
+                </span>
+                <span
+                  class="mt-2 block text-3xl font-medium leading-tight text-white/85 md:mt-4 md:text-5xl"
+                  data-i18n="hero-title-2"
+                >
+                  que transforma sua empresa.
+                </span>
+              </h1>
+              <p class="mx-auto mt-5 max-w-3xl text-base text-white/75 sm:text-lg" data-i18n="hero-subtitle">
+                Sua gestão digital começa com uma base sólida. Construímos os trilhos
+                digitais para o seu crescimento estruturado e escalável!
+              </p>
+            </div>
+            <div
+              class="mx-auto h-fit w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
             >
+              <p class="text-sm uppercase tracking-[0.2em] text-white/60" data-i18n="pain-box-title">
+                O FIM DA DESORGANIZAÇÃO
+              </p>
+              <p class="mt-4 text-justify text-sm leading-relaxed text-white/75" data-i18n="pain-box-text">
+                Esqueça falhas, lentidão e processos manuais. Construímos a base
+                tecnológica que sustenta a sua operação diária. Servidores otimizados e
+                sistemas que não te deixam na mão.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative z-10 mt-12 flex flex-col gap-6 border-t border-white/10 pt-7 sm:flex-row sm:items-center sm:justify-between"
+          >
+            <a
+              href="#portfolio"
+              class="inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-charcoal transition hover:bg-white/90"
+            >
+              <span data-i18n="hero-cta-solutions">Ver soluções</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <div class="flex flex-wrap items-center gap-4 text-white/70">
+              <div class="flex items-center gap-5">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="transition-transform duration-300 hover:scale-110"
+                >
+                  <img
+                    src="./icones/instagram.png"
+                    alt="Instagram Grupo AG"
+                    data-i18n-alt="img-instagram-alt"
+                    class="h-5 w-5 object-contain opacity-80 transition-opacity hover:opacity-100"
+                  />
+                </a>
+                <a
+                  href="https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20do%20Grupo%20AG."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="transition-transform duration-300 hover:scale-110"
+                >
+                  <img
+                    src="./icones/whatsapp.png"
+                    alt="WhatsApp Grupo AG"
+                    data-i18n-alt="img-whatsapp-alt"
+                    class="h-5 w-5 object-contain opacity-80 transition-opacity hover:opacity-100"
+                  />
+                </a>
+              </div>
+              <p class="text-xs font-medium tracking-[0.18em]" data-i18n="hero-tagline">
+                GRUPO AG - SOLUÇÕES WEB
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="mx-auto mt-20 max-w-[1240px] px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-end">
+          <h2 class="max-w-xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl" data-i18n="portfolio-title">
+            Transformamos negócios com infraestrutura robusta
+          </h2>
+          <p class="max-w-xl text-sm leading-relaxed text-slate sm:text-base" data-i18n="portfolio-desc">
+            Somos focados no futuro do desenvolvimento e infraestrutura digital. Entregamos
+            a base tecnológica completa para gestão, otimizando a presença digital da sua
+            empresa.
+          </p>
+        </div>
+
+        <div class="mt-12 grid w-full grid-cols-1">
+          <article
+            class="mx-auto w-full max-w-4xl overflow-hidden rounded-[2rem] border border-black/5 bg-zinc-100 p-6 sm:p-8"
+          >
+            <img
+              src="./img/dashboardBarber.png"
+              alt="Dashboard AG Barber PRO"
+              data-i18n-alt="img-dashboard-alt"
+              class="h-auto w-full rounded-xl border border-gray-100 object-cover shadow-md"
+            />
+            <div class="mt-6 flex items-center justify-between gap-4 sm:mt-8">
+              <h3 class="text-2xl font-semibold text-zinc-900">AG Barber PRO</h3>
+              <a
+                href="#"
+                class="shrink-0 rounded-full border border-zinc-900/15 bg-white px-4 py-2 text-sm font-medium text-zinc-900 transition hover:border-zinc-900/35"
+                data-i18n="view-system"
+                >Ver sistema ↗</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mt-24 overflow-hidden border-y border-black/5 py-8">
+        <div
+          id="marquee"
+          class="marquee-track whitespace-nowrap text-[13vw] font-semibold leading-none text-black"
+        >
+          <span class="mx-6 inline-block text-black">grupo.ag</span>
+          <span class="mx-6 inline-block text-black">grupo.ag</span>
+          <span class="mx-6 inline-block text-black">grupo.ag</span>
+          <span class="mx-6 inline-block text-black">grupo.ag</span>
+          <span class="mx-6 inline-block text-black">grupo.ag</span>
+          <span class="mx-6 inline-block text-black">grupo.ag</span>
+        </div>
+      </section>
+
+      <section
+        id="servicos"
+        class="mx-auto mt-20 flex w-full max-w-4xl flex-col items-center px-4 sm:px-6 lg:px-8"
+      >
+        <h2 class="text-center text-3xl font-semibold leading-tight sm:text-4xl" data-i18n="services-title">
+          Tecnologia que impulsiona seu sucesso
+        </h2>
+        <ul class="mx-auto mt-10 w-full max-w-2xl divide-y divide-black/10">
+          <li class="flex items-center justify-between py-4 text-lg font-medium">
+            <span data-i18n="service-1">Infraestrutura Web</span><span aria-hidden="true">↗</span>
+          </li>
+          <li class="flex items-center justify-between py-4 text-lg font-medium">
+            <span data-i18n="service-2">Sistemas de Gestão (SaaS)</span><span aria-hidden="true">↗</span>
+          </li>
+          <li class="flex items-center justify-between py-4 text-lg font-medium">
+            <span data-i18n="service-3">Soluções em Nuvem</span><span aria-hidden="true">↗</span>
+          </li>
+          <li class="flex items-center justify-between py-4 text-lg font-medium">
+            <span data-i18n="service-4">Consultoria Tech</span><span aria-hidden="true">↗</span>
           </li>
         </ul>
-        <a
-          href="https://wa.me/5591137480?text=Ol%C3%A1!%20Estou%20no%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
-          target="_blank"
-          class="btn btn-primary"
-          rel="noopener noreferrer"
-          style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;"
-          >QUERO SER PRO</a
+        <p
+          class="mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate md:mt-10"
+          data-i18n="services-desc"
         >
-
-        <button class="mobile-menu-btn" type="button" aria-label="Abrir menu">
-          <i data-lucide="menu"></i>
-        </button>
-      </nav>
-    </header>
-
-    <main>
-      <section id="home" class="hero container">
-        <span class="hero-badge">All-In-One Corporate Solution</span>
-
-        <h1 class="hero-title">
-          Potencialize sua empresa com
-          <span>nosso sistema de gestão</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          Elimine a complexidade operacional. 
-          Entregamos a infraestrutura digital completa para simplificar sua rotina e 
-          maximizar a produtividade da sua equipe.
+          Estruturamos ambientes digitais de alta disponibilidade, com foco em segurança,
+          escalabilidade e governança tecnológica para operações em crescimento.
         </p>
-
-        <div class="hero-actions">
-          <a href="#servicos" class="btn btn-primary">CONHEÇA NOSSOS SERVIÇOS</a>
-          <a href="https://wa.me/5591137480?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20para%20entender%20como%20o%20sistema%20do%20Grupo%20AG%20pode%20otimizar%20os%20processos%20do%20meu%20neg%C3%B3cio." 
-          target="_blank" class="btn btn-secondary">
-            FALAR COM UM ESPECIALISTA</a>
-        </div>
-
-        <blockquote class="hero-quote">
-          “Nenhuma grande empresa cresce baseada em anotações perdidas. 
-          Nós construímos os trilhos digitais para a sua expansão acelerada.”
-          <cite>— Grupo AG</cite>
-        </blockquote>
-
-        <a href="#trusted" class="scroll-indicator" aria-label="Rolar para baixo">
-          <i data-lucide="mouse"></i>
-          <i data-lucide="chevrons-down"></i>
-        </a>
       </section>
 
-      <section id="trusted" class="trusted container">
-        <p class="section-overline">NOSSAS ESPECIALIDADES DIGITAIS</p>
-        <div class="logo-strip" aria-label="Empresas parceiras">
-          <span>Landing Page</span>
-          <span>Sistemas de Gestão</span>
-          <span>Sites Corporativos</span>
-          <span>Consultoria Tech</span>
-        </div>
-      </section>
-
-      <section id="servicos" class="products container">
-        <p class="section-overline">PRODUCTS & SERVICES</p>
-        <h2>Soluções desenvolvidas para o seu nicho</h2>
-        <p class="section-subtitle">
-          Criamos plataformas especializadas que resolvem as dores reais do seu negócio, unindo tecnologia de ponta com usabilidade simples.
-        </p>
-
-        <div class="cards-grid">
-          <article class="glass-card">
-            <div class="card-icon icon-box">
-              <img
-                src="barbearia_icon.png"
-                class="product-icon"
-                alt="Ícone da barbearia"
-              />
-            </div>
-            <h3>AG BARBER PRO</h3>
-            <p class="destaque-texto">
-              O controle total da sua barbearia na palma da mão.
-            </p>
-            <p>
-              O AG Barber PRO é uma plataforma de gestão desenvolvida exclusivamente para modernizar, organizar e impulsionar o crescimento de barbearias.
-            </p>
-            <a href="#" class="card-link"
-              >LEARN MORE <i data-lucide="arrow-up-right"></i
-            ></a>
-          </article>
-        </div>
-      </section>
-
-      <section id="vantagens" class="why-us container">
-        <p class="section-overline">POR QUE NOS ESCOLHER?</p>
-        <h2>Gestão inteligente que cresce com a sua empresa</h2>
-        <p class="section-subtitle">
-          Desenvolvemos sistemas robustos e intuitivos para que você tenha controle total da operação, 
-          independentemente do tamanho do seu negócio.
-        </p>
-
-        <div class="features-line" aria-hidden="true"></div>
-        <div class="features-grid">
-          <article class="feature-item">
-            <div class="feature-icon"><i data-lucide="shield-check"></i></div>
-            <h3>Infraestrutura e Segurança</h3>
-            <p>
-              Hospedado na AWS com segurança de nível bancário (Certificado SSL e backups automáticos). Protegemos sua agenda, financeiro e dados de clientes em um cofre digital 100% blindado contra falhas, perdas ou invasões.
-            </p>
-          </article>
-
-          <article class="feature-item">
-            <div class="feature-icon"><i data-lucide="cloud"></i></div>
-            <h3>Acesso de Qualquer Lugar</h3>
-            <p>
-              Gestão 100% em nuvem, sem necessidade de instalar programas pesados. Controle o caixa, a agenda e o histórico de clientes pelo celular, tablet ou computador, de onde você estiver e a qualquer hora do dia.
-            </p>
-          </article>
-
-          <article class="feature-item">
-            <div class="feature-icon"><i data-lucide="mouse-pointer-click"></i></div>
-            <h3>Foco na Facilidade de Uso</h3>
-            <p>
-              Um sistema rápido, intuitivo e sem telas confusas. Fácil de aprender e direto ao ponto, para que você e sua equipe percam menos tempo no computador e foquem no que traz dinheiro: o corte e o atendimento ao cliente.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="faq" class="faq container">
-        <p class="section-overline">AINDA COM DÚVIDAS?</p>
-        <h2>Perguntas frequentes</h2>
-        <p class="section-subtitle">
-          Tire suas dúvidas e veja como é simples modernizar a gestão da sua barbearia com o Grupo AG.
-        </p>
-
-        <div class="accordion" id="faqAccordion">
-          <article class="faq-item active">
-            <button class="faq-question" type="button" aria-expanded="true">
-              Preciso comprar computadores caros para rodar o sistema?
-              <span class="faq-icon">−</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Não. Como o nosso sistema é 100% em nuvem, ele é super leve. Você pode usá-lo perfeitamente no seu celular, em um tablet, ou em qualquer computador básico com acesso à internet que você já tenha na barbearia.
-              </p>
-            </div>
-          </article>
-
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              Consigo acompanhar o movimento da barbearia quando não estou lá?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Com toda a certeza. Como o AG Barber PRO funciona em nuvem, você tem o controle do seu negócio na palma da mão. De onde estiver, basta acessar pelo celular para ver a agenda em tempo real, o fluxo de caixa do dia e os relatórios de fechamento.
-              </p>
-            </div>
-          </article>
-
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              Uso agenda de papel hoje. É muito difícil passar tudo para o sistema?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                A transição é super simples! Nosso sistema é tão fácil de usar que você e sua equipe se acostumam no primeiro dia. Além disso, nossa equipe de suporte te ajuda com os primeiros passos para você não começar do zero.
-              </p>
-            </div>
-          </article>
-
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              Se o sistema travar num sábado à tarde, vou ficar na mão?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Sabemos muito bem que sexta e sábado são os dias que a barbearia mais bomba. Por isso, nosso suporte via WhatsApp é rápido, humanizado e focado em resolver qualquer problema na hora, para a sua operação não parar nunca.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="bottom-cta container">
-        <h2>Pronto para transformar a gestão do seu negócio?</h2>
-        <p>
-          Dê o próximo passo. Fale com um de nossos especialistas e descubra como o Grupo AG pode impulsionar seus resultados hoje mesmo.
-        </p>
-        <a href="https://wa.me/5591137480?text=Ol%C3%A1!%20Cheguei%20ao%20final%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista%20do%20Grupo%20AG." target="_blank" class="btn btn-primary" style="text-decoration: none; display: inline-flex; justify-content: center; align-items: center;">FALAR COM UM ESPECIALISTA</a>
-      </section>
     </main>
 
-    <footer id="footer" class="footer container">
-      <p>© 2026 Grupo AG. All rights reserved.</p>
+    <footer id="footer" class="mt-32 border-t border-black/10 pt-24">
+      <div class="mx-auto grid max-w-[1240px] gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div>
+          <h3 class="max-w-xs text-2xl font-semibold leading-tight" data-i18n="footer-headline">
+            Transforme suas ideias em resultados impactantes
+          </h3>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate" data-i18n="footer-nav-heading">Navegação</h4>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#home" data-i18n="nav-home">Home</a></li>
+            <li><a href="#portfolio" data-i18n="nav-systems">Sistemas</a></li>
+            <li><a href="#servicos" data-i18n="nav-solutions">Soluções</a></li>
+            <li><a href="#footer" data-i18n="nav-contact">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate" data-i18n="footer-contact-heading">Contato</h4>
+          <p class="mt-4 text-sm" data-i18n="footer-location">Ijuí - RS, Brasil</p>
+          <p class="mt-2 text-sm">+55 55 9 9132-3564</p>
+          <a href="mailto:contato@grupoagsistemas.com.br" class="mt-2 block text-sm hover:underline"
+            >contato@grupoagsistemas.com.br</a
+          >
+          <a
+            href="https://instagram.com/grupoagsistemas"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 flex w-fit items-center gap-2 text-gray-500 transition-colors hover:text-gray-900"
+          >
+            <img
+              src="./icones/instagram2.png"
+              alt="Instagram Grupo AG"
+              data-i18n-alt="img-instagram-alt"
+              class="h-5 w-5 object-contain opacity-80 transition-opacity hover:opacity-100"
+            />
+            <span class="text-sm font-medium">@grupoagsistemas</span>
+          </a>
+        </div>
+
+        <div
+          class="flex w-full min-w-0 items-center gap-6 rounded-2xl border border-gray-200 bg-zinc-50 p-4 sm:min-w-[380px] lg:min-w-[420px]"
+        >
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20do%20Grupo%20AG."
+            alt="QR Code WhatsApp Grupo AG"
+            class="h-24 w-24 shrink-0 rounded-lg border border-gray-100 bg-white object-contain p-1.5 shadow-md md:h-32 md:w-32"
+          />
+          <div class="flex min-w-[180px] flex-1 flex-col gap-3">
+            <p class="text-sm font-medium leading-snug" data-i18n="footer-whatsapp-cta">
+              Fale com a gente por whatsapp
+            </p>
+            <a
+              href="https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20iniciar%20um%20projeto%20com%20o%20Grupo%20AG."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-fit items-center justify-center gap-2 rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600"
+            >
+              <img
+                src="./icones/whatsapp2.png"
+                alt="WhatsApp"
+                class="h-5 w-5 shrink-0 object-contain"
+              />
+              <span data-i18n="footer-chat-now">Falar agora</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-brand-wrap">
+        <p class="footer-brand">grupo ag</p>
+      </div>
     </footer>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
   </body>
 </html>
