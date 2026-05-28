@@ -168,46 +168,48 @@
           </div>
 
           <div
-            class="relative z-10 mx-6 flex shrink-0 flex-col gap-4 border-t border-white/10 pb-6 pt-5 sm:flex-row sm:items-center sm:justify-between md:mx-8 md:pb-8"
+            class="relative z-10 flex w-full shrink-0 flex-col items-center justify-center gap-6 border-t border-gray-800 px-6 pb-6 pt-6 md:flex-row md:justify-between md:px-8 md:pb-8"
           >
             <a
               href="#portfolio"
-              class="inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-charcoal transition hover:bg-white/90"
+              class="flex items-center justify-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-gray-200"
             >
               <span data-i18n="hero-cta-solutions">Ver soluções</span>
-              <span aria-hidden="true">↓</span>
+              <span aria-hidden="true" class="text-base leading-none">↓</span>
             </a>
-            <div class="flex flex-wrap items-center gap-4 text-white/70">
-              <div class="flex items-center gap-5">
-                <a
-                  href="#"
-                  target="_blank"
-                  class="transition-transform duration-300 hover:scale-110"
-                >
-                  <img
-                    src="./icones/instagram.png"
-                    alt="Instagram Grupo AG"
-                    data-i18n-alt="img-instagram-alt"
-                    class="h-5 w-5 object-contain opacity-80 transition-opacity hover:opacity-100"
-                  />
-                </a>
-                <a
-                  href="https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20do%20Grupo%20AG."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="transition-transform duration-300 hover:scale-110"
-                >
-                  <img
-                    src="./icones/whatsapp.png"
-                    alt="WhatsApp Grupo AG"
-                    data-i18n-alt="img-whatsapp-alt"
-                    class="h-5 w-5 object-contain opacity-80 transition-opacity hover:opacity-100"
-                  />
-                </a>
-              </div>
-              <p class="text-xs font-medium tracking-[0.18em]" data-i18n="hero-tagline">
+
+            <div class="flex flex-row flex-nowrap items-center justify-center gap-4">
+              <a
+                href="#"
+                target="_blank"
+                class="shrink-0 text-gray-400 transition-colors hover:text-white"
+              >
+                <img
+                  src="./icones/instagram.png"
+                  alt="Instagram Grupo AG"
+                  data-i18n-alt="img-instagram-alt"
+                  class="h-5 w-5 object-contain opacity-80 transition-opacity hover:opacity-100"
+                />
+              </a>
+              <a
+                href="https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20do%20Grupo%20AG."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 text-gray-400 transition-colors hover:text-white"
+              >
+                <img
+                  src="./icones/whatsapp.png"
+                  alt="WhatsApp Grupo AG"
+                  data-i18n-alt="img-whatsapp-alt"
+                  class="h-5 w-5 object-contain opacity-80 transition-opacity hover:opacity-100"
+                />
+              </a>
+              <span
+                class="whitespace-nowrap text-xs font-semibold uppercase tracking-widest text-gray-400 md:text-sm"
+                data-i18n="hero-tagline"
+              >
                 GRUPO AG - SOLUÇÕES WEB
-              </p>
+              </span>
             </div>
           </div>
         </div>
@@ -385,13 +387,16 @@
       </div>
     </div>
 
-    <footer id="footer" class="mt-16 border-t border-black/10 pt-16 lg:mt-24 lg:pt-24 xl:mt-32">
+    <footer
+      id="footer"
+      class="mt-16 border-t border-black/10 bg-white px-6 pt-16 md:px-12 lg:mt-24 lg:px-24 lg:pt-24 xl:mt-32"
+    >
       <div
-        class="mx-auto grid w-full min-w-0 max-w-7xl grid-cols-1 gap-8 px-6 pb-10 sm:gap-10 lg:grid-cols-4 lg:px-8 lg:pb-12"
+        class="mx-auto grid w-full min-w-0 max-w-7xl grid-cols-1 gap-8 pb-10 sm:gap-10 lg:grid-cols-4 lg:pb-12"
       >
         <div class="min-w-0">
           <h3
-            class="max-w-xs text-xl font-semibold leading-tight md:text-2xl"
+            class="mx-auto max-w-xs text-center text-xl font-semibold leading-tight md:mx-0 md:text-left md:text-2xl"
             data-i18n="footer-headline"
           >
             Transforme suas ideias em resultados impactantes
@@ -460,7 +465,7 @@
         </div>
       </div>
 
-      <div class="footer-brand-wrap">
+      <div class="footer-brand-wrap px-6 md:px-12 lg:px-24">
         <p class="footer-brand">grupo ag</p>
       </div>
     </footer>
