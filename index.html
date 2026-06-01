@@ -126,7 +126,7 @@
               class="mx-auto flex w-full max-w-4xl flex-col items-center space-y-3 px-0 text-center md:space-y-4 2xl:space-y-5 lg:max-w-5xl"
             >
               <span
-                class="inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-white/90"
+                class="hero-badge inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-white/90"
                 data-i18n="hero-badge"
               >
                 Grupo AG | O futuro do desenvolvimento
@@ -392,7 +392,7 @@
       class="mt-16 border-t border-black/10 bg-white px-6 pt-16 md:px-12 lg:mt-24 lg:px-24 lg:pt-24 xl:mt-32"
     >
       <div
-        class="mx-auto grid w-full min-w-0 max-w-7xl grid-cols-1 gap-8 pb-10 sm:gap-10 lg:grid-cols-4 lg:pb-12"
+        class="footer-grid mx-auto grid w-full min-w-0 max-w-7xl grid-cols-1 gap-8 pb-10 sm:gap-10 lg:grid-cols-4 lg:pb-12"
       >
         <div class="min-w-0">
           <h3
@@ -437,15 +437,18 @@
         </div>
 
         <div
-          class="flex w-full min-w-0 max-w-full items-center gap-6 rounded-2xl border border-gray-200 bg-zinc-50 p-4 lg:min-w-[380px] xl:min-w-[420px]"
+          class="footer-whatsapp-card flex w-full min-w-0 max-w-full items-center gap-6 rounded-2xl border border-gray-200 bg-zinc-50 p-4 lg:min-w-[380px] xl:min-w-[420px]"
         >
           <img
             src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20do%20Grupo%20AG."
             alt="QR Code WhatsApp Grupo AG"
-            class="h-24 w-24 shrink-0 rounded-lg border border-gray-100 bg-white object-contain p-1.5 shadow-md md:h-32 md:w-32"
+            class="footer-whatsapp-qr h-24 w-24 shrink-0 rounded-lg border border-gray-100 bg-white object-contain p-1.5 shadow-md md:h-32 md:w-32"
           />
-          <div class="flex min-w-[180px] flex-1 flex-col gap-3">
-            <p class="text-sm font-medium leading-snug" data-i18n="footer-whatsapp-cta">
+          <div class="footer-whatsapp-copy flex min-w-[180px] flex-1 flex-col gap-3">
+            <p
+              class="footer-whatsapp-text text-sm font-medium leading-snug"
+              data-i18n="footer-whatsapp-cta"
+            >
               Fale com a gente por whatsapp
             </p>
             <a
