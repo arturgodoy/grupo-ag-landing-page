@@ -23,57 +23,70 @@ body {
   }
 }
 
-/* Notebooks até 1366px (grid 4 colunas): card WhatsApp sem cortar na borda */
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
+/* Notebooks até 1366px: grid mais compacto + card WhatsApp em linha */
+@media screen and (max-width: 1366px) {
   #footer {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .footer-grid {
-    gap: 1.25rem;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-right: 2rem;
   }
 
   .footer-whatsapp-card {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     min-width: 0;
     max-width: 100%;
-    width: 100%;
-    gap: 0.875rem;
-    padding: 1rem;
-    text-align: center;
+    margin-right: 1.875rem;
+    padding: 0.75rem 1rem;
   }
 
   .footer-whatsapp-qr {
-    height: 5.5rem;
-    width: 5.5rem;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
   }
 
   .footer-whatsapp-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
     min-width: 0;
-    width: 100%;
-    max-width: 100%;
     flex: 1 1 auto;
-    align-items: center;
     white-space: normal;
   }
 
   .footer-whatsapp-text {
-    width: 100%;
-    max-width: 12rem;
+    font-size: 0.75rem;
+    line-height: 1.35;
     white-space: normal;
     overflow-wrap: anywhere;
     word-wrap: break-word;
-    text-align: center;
-    line-height: 1.4;
+    text-align: left;
+    max-width: 9.5rem;
   }
 
   .footer-whatsapp-copy a {
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  #footer {
+    padding-left: 1.5rem;
+  }
+
+  .footer-grid {
+    gap: 0.625rem;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.72fr) minmax(0, 0.88fr) minmax(0, 1.25fr);
+  }
+
+  .footer-whatsapp-card {
+    min-width: 0;
+    width: 100%;
   }
 }
 
