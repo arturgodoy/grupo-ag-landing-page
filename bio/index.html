@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupo AG | Bio</title>
+    <meta
+      name="description"
+      content="Links oficiais do Grupo AG — WhatsApp, site e redes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            colors: {
+              charcoal: "#0b101c",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="bio.css" />
+  </head>
+  <body class="bio-body antialiased">
+    <div class="bio-glow bio-glow--cyan" aria-hidden="true"></div>
+    <div class="bio-glow bio-glow--indigo" aria-hidden="true"></div>
+
+    <main class="bio-page">
+      <div class="bio-content">
+        <header class="bio-profile">
+          <a href="../index.html" class="bio-logo-link" aria-label="Grupo AG — página inicial">
+            <img
+              src="../img/grupoag.png"
+              alt="Grupo AG"
+              class="bio-logo"
+              width="240"
+              height="auto"
+            />
+          </a>
+        </header>
+
+        <nav class="bio-links" aria-label="Links principais">
+          <a
+            href="https://wa.me/555591323564?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20do%20Grupo%20AG."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bio-btn bio-btn--whatsapp"
+          >
+            <img
+              src="../icones/whatsapp2.png"
+              alt=""
+              class="bio-btn__icon"
+              width="22"
+              height="22"
+            />
+            <span>Fale conosco pelo WhatsApp</span>
+          </a>
+
+          <a href="../index.html" class="bio-btn bio-btn--site">
+            <span>Acesse nosso Site Oficial</span>
+            <span class="bio-btn__arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+
+      <footer class="bio-footer">
+        <p class="bio-footer__text">
+          © 2026 Grupo AG.<br />
+          Todos os direitos reservados.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
