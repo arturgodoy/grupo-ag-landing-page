@@ -37,6 +37,22 @@ body {
   .hero-pain-box {
     margin-top: 0.625rem;
     margin-bottom: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-pain-box-title {
+    margin-bottom: 0.375rem;
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .hero-pain-box-text {
+    margin-top: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   .hero-shell {
